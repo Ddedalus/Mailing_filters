@@ -1,0 +1,11 @@
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:{id}</id>
+		<updated>{current_date}</updated>
+		<content></content>
+		<apps:property name='hasTheWord' value='from:({teachers}) OR subject:({subject_tag})'/>
+		<apps:property name='forwardTo' value='{student_mail}'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?><feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+	<title>Mail Filters</title>
+	
+<id>tag:mail.google.com,2008:filters:0000000001,0000000002,0000000003</id>
+	<updated>2016-09-08T23:04:56Z</updated>
+	<author>
+		<name>3G klasa
+</name>
+		<email>pierwszag.lo3@gmail.com
+</email>
+	</author>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:0000000001</id>
+		<updated>{current_date}</updated>
+		<content></content>
+		<apps:property name='hasTheWord' value='from:((&lt;teacher1@gmail.com
+&gt; OR &lt;teacher.t.2@wp.pl
+&gt;)) OR subject:(#DoWszystkich
+)'/>
+		<apps:property name='forwardTo' value='student1@gmail.com
+'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:0000000002</id>
+		<updated>{current_date}</updated>
+		<content></content>
+		<apps:property name='hasTheWord' value='from:((&lt;teacher1@gmail.com
+&gt; OR &lt;teacher.t.2@wp.pl
+&gt;)) OR subject:(#DoWszystkich
+)'/>
+		<apps:property name='forwardTo' value='studnet2@hotmail.com
+'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:0000000003</id>
+		<updated>{current_date}</updated>
+		<content></content>
+		<apps:property name='hasTheWord' value='from:((&lt;teacher1@gmail.com
+&gt; OR &lt;teacher.t.2@wp.pl
+&gt;)) OR subject:(#DoWszystkich)'/>
+		<apps:property name='forwardTo' value='student.3@ymail.com
+'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+</feed>

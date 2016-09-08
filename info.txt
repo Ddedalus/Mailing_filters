@@ -1,0 +1,4 @@
+email;pierwszag.lo3@gmail.com
+name;3G klasa
+start_id;1
+subject_tag;#DoWszystkich
