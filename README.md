@@ -1,3 +1,4 @@
+Link do opisu: [http://prezi.com/dc8h6mqf3dcf/?utm_campaign=share&utm_medium=copy]
 Jeśli kiedyś widziałeś kod na GitHubie, nie czytaj tego :P
 
 Użyj zielonego przycisku po prawej, a następnie opcji "Download ZIP". 
