@@ -13,6 +13,10 @@ with open('info.txt', 'r') as i:
 with open('students.txt', 'r') as s:
 	students = [l for l in s]
 	
+	if len(students[-1]) == 0:
+		students.remove(students[-1])
+		#check if it works or creates new table...
+	
 with open('teachers.txt', 'r') as t:
 	teachers = [l for l in t]
 #collect students and teachers emails
@@ -27,14 +31,15 @@ def generate_filters():
 
 	try:
 		f = open(output_name, 'w')
-	except FileException:
+	except FileNotFoundError:
 		return 1
 	
 	tvar = '('
 	for t in teachers:
-		tvar += '&lt;' + str(t) + '&gt; OR '
+		if len(t) > 0:
+			tvar += '&lt;' + str(t) + '&gt; OR '
+			
 	tvar = tvar[:-4] + ')'	#remove last ' OR ' and close ()
-		
 	ids = ''
 	entrys = []
 
