@@ -1,5 +1,4 @@
-Link do opisu: [http://prezi.com/dc8h6mqf3dcf/?utm_campaign=share&utm_medium=copy]
-Jeśli kiedyś widziałeś kod na GitHubie, nie czytaj tego :P
+Link do opisu: http://prezi.com/dc8h6mqf3dcf/?utm_campaign=share&utm_medium=copy
 
 Użyj zielonego przycisku po prawej, a następnie opcji "Download ZIP". 
 
@@ -8,7 +7,7 @@ Jeśli **masz zainstalowanego Pythona**, wyodrębnij wszystkie pliki w wygodnym 
 Gdy program się wykona, możesz zaimportować plik Mailing_filters.xml do Gmaila (zakłakda filtry)
 
 
-Jeśli **nie masz zainstalowanego Pythona**, wejdź na [http://www.tutorialspoint.com/execute_python_online.php] bądź jakikolwiek inny serwis, który pozwala wykonywać kod online. Następnie klikając prawym przyciskiem myszy na folder `root` po lewej, wybierz "Upload file" i wskaż *folder zip*, który pobrałeś. Po wysłaniu na serwer w terminalu na dole wpisz
+Jeśli **nie masz zainstalowanego Pythona**, wejdź na http://www.tutorialspoint.com/execute_python_online.php bądź jakikolwiek inny serwis, który pozwala wykonywać kod online. Następnie klikając prawym przyciskiem myszy na folder `root` po lewej, wybierz "Upload file" i wskaż *folder zip*, który pobrałeś. Po wysłaniu na serwer w terminalu na dole wpisz
 
 `unzip Mailing_filters-master.zip`.
 
