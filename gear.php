@@ -80,4 +80,6 @@ echo "<br/><hr/>";
 
 ?>
 
-<textarea cols="80" rows="50"><?php echo $output;?></textarea>
+<script type="text/javascript" src="js/main.js"></script>
+<textarea id="result" cols="80" rows="50"><?php echo $output;?></textarea>
+<button onclick="saveTextAsFile()">Zapisz</button>
