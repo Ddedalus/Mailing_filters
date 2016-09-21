@@ -16,9 +16,12 @@ $teachers_input = (isset($_POST['teachers']) ? $_POST['teachers'] : '');
 //TODO Validation
 $students = preg_split("/[\s,]+/", $students_input);
 $teachers = preg_split("/[\s,]+/", $teachers_input);
+$students = array_unique($students);
+
 
 $teachers = array_map("map_Teachers", $teachers);
 $teachers_formula = implode(" OR ", $teachers);
+
 
 $id = "";
 $ids = array(); //array of id
@@ -32,7 +35,15 @@ date_default_timezone_get();
 $date = date('m/d/Y h:i:s a', time());
 
 for($i = 0;$i < count($students); $i++) {
-   
+
+    if(key_exists($i, $students) ) {
+            if(filter_var( ($students[$i]), FILTER_VALIDATE_EMAIL) === false) {
+                continue;
+            }
+    } else {
+        continue;
+    }
+    
     $simple_id = str_pad(strval($i+1), 10, "0", STR_PAD_LEFT);
     array_push($ids, $simple_id);
 
