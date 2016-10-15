@@ -1,9 +1,15 @@
 <?php
 //TODO functions in diffrent file
+
+//function to convert values from "foo" into "<foo>"
+//if value is improper func. changes it to ERROR
+//those wrong keys-values pairs are later checked and deleted from array
 function map_Teachers($t)
 {
-    //Does it need to be in that form? I mean evaluate to <>, or just url code?
-    return '&lt;'.$t.'&gt;';
+    if( filter_var( $t, FILTER_VALIDATE_EMAIL) === false ) {
+    	return "ERROR";
+    } else
+        return '&lt;'.$t.'&gt;';
 }
 
 
@@ -13,15 +19,16 @@ $class_email = (isset($_POST['class_email']) ? $_POST['class_email'] : '');;
 $students_input = (isset($_POST['students']) ? $_POST['students'] : '');
 $teachers_input = (isset($_POST['teachers']) ? $_POST['teachers'] : '');
                        
-//TODO Validation
 $students = preg_split("/[\s,]+/", $students_input);
 $teachers = preg_split("/[\s,]+/", $teachers_input);
+
 $students = array_unique($students);
 
-
+$teachers = array_unique($teachers);
 $teachers = array_map("map_Teachers", $teachers);
+$teachers = array_diff($teachers, ["ERROR"]);
+$teachers = array_values($teachers);
 $teachers_formula = implode(" OR ", $teachers);
-
 
 $id = "";
 $ids = array(); //array of id
@@ -29,22 +36,23 @@ $header = "";
 $entries = "";
 
 
-
-//TODO Format date
+//formatting date
 date_default_timezone_get();
-$date = date('m/d/Y h:i:s a', time());
+$date = date('Y-m-d\Th:i:s\Z', time());
 
-for($i = 0;$i < count($students); $i++) {
+//generatign single filters
+for($i = 0, $n = 0;$i < count($students); $i++) {
 
     if(key_exists($i, $students) ) {
             if(filter_var( ($students[$i]), FILTER_VALIDATE_EMAIL) === false) {
                 continue;
             }
+	    $n++;
     } else {
         continue;
     }
     
-    $simple_id = str_pad(strval($i+1), 10, "0", STR_PAD_LEFT);
+    $simple_id = str_pad(strval($n), 10, "0", STR_PAD_LEFT);
     array_push($ids, $simple_id);
 
     $entries .= <<<XML
@@ -62,6 +70,7 @@ for($i = 0;$i < count($students); $i++) {
 XML;
 }
 
+//creating header
 $id = implode(", ", $ids);
 $header .= <<<XML
 <?xml version='1.0' encoding='UTF-8'?>
@@ -75,19 +84,9 @@ $header .= <<<XML
     </author>
 XML;
 
+//conecting everything
 $output = $header.$entries;
 $output .= "\n</feed>";
-
-/*tests
-echo $teachers_formula;
-echo "<br/><hr/>";
-echo $date;
-echo "<br/><hr/>";
-echo count($students);
-echo "<br/><hr/>";
-echo $ids;
-echo "<br/><hr/>";
-*/
 
 ?>
 
