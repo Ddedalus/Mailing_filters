@@ -12,7 +12,8 @@ function map_Teachers($t)
         return '&lt;'.$t.'&gt;';
 }
 
-
+$tester = 5;
+   
 $class_name = (isset($_POST['class_name']) ? $_POST['class_name'] : '');
 $class_email = (isset($_POST['class_email']) ? $_POST['class_email'] : '');;
            
@@ -90,6 +91,32 @@ $output .= "\n</feed>";
 
 ?>
 
-<script type="text/javascript" src="js/main.js"></script>
-<textarea id="result" cols="80" rows="50"><?php echo $output;?></textarea>
-<button onclick="saveTextAsFile()">Zapisz</button>
+<!DOCTYPE HTML>                                                                 
+<html>                                                                
+<head>                                                                          
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/classes.css">
+  <title>#DoWszystkich</title>
+</head>                                                                         
+<body>                                                                          
+  <div class="container"> 
+    <div class="row header whiteground">                                                    
+      <div class="col-md-12">                                                          
+        <h1>Generator Filtrów</h1>                                              
+      </div>                                                                    
+      <div class="col-md-12">                                                    
+	<p>Lorem ipsum  monus></p>
+      </div>                                                                    
+    </div>   
+	<div class="row result whiteground">
+	  <div class="col-md-12">
+	    <script type="text/javascript" src="js/main.js"></script>
+	    <textarea id="result" cols="80"><?php echo $output;?></textarea> 
+	    <button onclick="saveTextAsFile()">Zapisz</button>
+	  </div>
+	</div>
+    </body>
+  </html>
+  

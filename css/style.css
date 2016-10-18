@@ -1,0 +1,33 @@
+{
+    border: 1px solid red !important;
+}
+
+body {
+    background-image: url("../subtlepatterns_com.png");
+}
+
+h2 {
+
+}
+
+input {
+    width: 100%;
+    height: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 20em;
+    box-sizing: border-box;
+    resize: none;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.header {
+    margin-top: 7em;
+}

@@ -3,45 +3,57 @@
 <head>                                                                          
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <title>#DoWszystkich</title>0
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/classes.css">
+  <title>#DoWszystkich</title>
 </head>                                                                         
 <body>                                                                          
   <div class="container">                                                       
-    <div class="row">                                                    
+    <div class="row header whiteground">                                                    
       <div class="col-md-12">                                                          
-        <h2>Generator Filtrów</h2>                                              
+        <h1>Generator Filtrów</h1>                                              
       </div>                                                                    
       <div class="col-md-12">                                                    
-        <p>Lorem ipsum  monus</p>
+	<p>Lorem ipsum  monus></p>
       </div>                                                                    
     </div>                                                                      
-    <div class="row">                                                     
+    <div class="row sender whiteground">                                                     
       <form action="gear.php" method="post">                                    
-         <div class="col-md-12">
-           <div>
-	     <h3>ssKlasa:</h3>
-	   </div>
-	   <div><input name="class_name"/></div>
-         </div>                                                            
-         <div class="col-md-12">
+         <div class="col-md-6">
 	   <div>
-	     <h3>Adres skrzynki pośredniczącej:</h3>
+	     <h2>Adresy uczniow</h2>
 	   </div>
-	   <div><input name="class_email"/></div>
+	   <div>
+	     <textarea placeholder="Paste students' addreses" name="students"></textarea>
+	   </div>
 	 </div>                                                            
          <div class="col-md-6">
 	   <div>
-	     <h3>Adresy uczniow</h3>
-	   </div>
-	   <div><textarea cols="40" rows="5" name="students"></textarea></div>
-	 </div>                                                            
-         <div class="col-md-6">
-	   <div>
-	     <h3>Adresy nauczycieli</h3>
+	     <h2>Adresy nauczycieli</h2>
 	   </div>                                                   
-	   <div><textarea cols="40" rows="5" name="teachers"></textarea></div>
-	 </div>                                                            
-         <div><input type="submit" value="Send"/></div>
+	   <div>
+	     <textarea placeholder="Paste teachers' addreses" name="teachers"></textarea>
+	   </div>
+	 </div>
+	 <div class="col-md-12 line">
+           <div class="col-md-4">
+	     <h2>Klasa:</h2>
+	   </div>
+	   <div class="col-md-8">
+	     <input name="class_name" id="sizingAddon2"/>
+	   </div>
+         </div>                                                            
+         <div class="col-md-12 line">
+	   <div class="col-md-4">
+	     <h2>Adres skrzynki pośredniczącej:</h2>
+	   </div>
+	   <div class="col-md-8">
+	     <input name="class_email"/>
+	   </div>
+	 </div>	 
+         <div class="col-md-12">
+	   <input type="submit" value="Send"/>
+	 </div>
       </form>                                                                   
     </div>                                                                      
   </div>                                                                        
