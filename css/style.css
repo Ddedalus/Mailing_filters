@@ -1,13 +1,14 @@
-{
+ {
     border: 1px solid red !important;
 }
 
 body {
-    background-image: url("../subtlepatterns_com.png");
+    background-color: #495C71;
 }
 
 h2 {
-
+	border-corner-shape: bevel;
+	
 }
 
 input {
@@ -22,6 +23,8 @@ textarea {
     resize: none;
     word-wrap: break-word;
     overflow: hidden;
+    background-color: #D0C198;
+    color: #1F334B;
 }
 
 .container {
@@ -30,4 +33,8 @@ textarea {
 
 .header {
     margin-top: 7em;
+}
+
+form {
+    margin-top: 2.5em;
 }

@@ -1,12 +1,22 @@
 .whiteground {
-    background-color: white;
+    background-color: #667688;
 }
 
-.line {
+.main-colour {
+    background-color: #AD9B6B;
+}
+
+.input-label {
     margin: auto;
 }
 
-.line h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+.line {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.big-line {
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
 }

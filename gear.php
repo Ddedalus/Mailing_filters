@@ -102,7 +102,7 @@ $output .= "\n</feed>";
 </head>                                                                         
 <body>                                                                          
   <div class="container"> 
-    <div class="row header whiteground">                                                    
+    <div class="row header main-colour">                                                    
       <div class="col-md-12">                                                          
         <h1>Generator Filtrów</h1>                                              
       </div>                                                                    
